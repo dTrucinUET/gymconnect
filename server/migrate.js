@@ -1,5 +1,9 @@
 const { Sequelize } = require('sequelize');
 const path = require('path');
+const config = require('./config/config.json'); 
+const environment = process.env.NODE_ENV || 'development';
+
+const dbConfig = config[environment];
 
 const migrations = [
     '20241213022009-create-roles.js',
@@ -20,11 +24,12 @@ const migrations = [
   
 
   (async () => {
-    const sequelize = new Sequelize('gymdb', 'root', 'password', {
-      host: 'localhost',
-      dialect: 'mysql',
-      logging: console.log,
+    const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, {
+      host: dbConfig.host,
+      dialect: dbConfig.dialect,
+      logging: console.log, 
     });
+
   
     try {
       for (const migration of migrations) {
