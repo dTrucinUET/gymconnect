@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
   Transaction.init(
     {
       status: DataTypes.ENUM('pending', 'failed', 'completed'),
+      user_id: DataTypes.INTEGER,
+      service_id: DataTypes.INTEGER,
     },
     {
       sequelize,

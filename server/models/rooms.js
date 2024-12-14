@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.TEXT,
       location: DataTypes.JSON,
       rating: DataTypes.FLOAT,
+      owner_id: DataTypes.INTEGER
     },
     {
       sequelize,

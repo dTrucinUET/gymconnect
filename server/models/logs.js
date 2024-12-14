@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   Log.init(
     {
       event: DataTypes.TEXT,
+      user_id: DataTypes.INTEGER
     },
     {
       sequelize,
