@@ -33,8 +33,6 @@ module.exports = (sequelize, DataTypes) => {
       address: { type: DataTypes.JSON, allowNull: true },
       dob: { type: DataTypes.DATEONLY, allowNull: true },
       avatar_url: { type: DataTypes.STRING, allowNull: true },
-      access_token: { type: DataTypes.TEXT, allowNull: true },
-      refresh_token: { type: DataTypes.TEXT, allowNull: true },
       location: { type: DataTypes.JSON, allowNull: false },
       balance: { type: DataTypes.FLOAT, allowNull: false },
     },

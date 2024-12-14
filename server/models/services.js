@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       balance: DataTypes.FLOAT,
       amount: DataTypes.INTEGER,
       type: DataTypes.ENUM('card', 'trainer', 'exercise'),
+      room_id: DataTypes.INTEGER
     },
     {
       sequelize,

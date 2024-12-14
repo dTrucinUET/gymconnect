@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       comment: DataTypes.TEXT,
       images_url: DataTypes.JSON,
       rating: DataTypes.FLOAT,
+      equipment_id: DataTypes.INTEGER
     },
     {
       sequelize,
